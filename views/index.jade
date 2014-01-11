@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  script(type='text/javascript', src='js/libs/require.js', data-main='js/main.js')
+  h1= title
+  div.chat(ng-app="chatApp", ng-controller="chatCtrl")
+    ul
+      li(ng-repeat="m in messages")
+        strong {{m.sender}} 
+        span {{m.msg}}
+    form(ng-submit="chat(msg)")
+      input(type="text", name="msg", ng-model="msg", init-focus)
+      input(type="submit", value="Send")

@@ -1,0 +1,32 @@
+@import url("http://fonts.googleapis.com/css?family=Allan");
+.chat {
+  border: 1px solid #87775a;
+  border-radius: 10px;
+  width: 300px;
+  height: 400px;
+  padding: 0;
+}
+.chat ul {
+  margin: 0;
+  padding: 0;
+  height: 360px;
+  overflow: auto;
+  border-bottom: 3px solid #221e17;
+}
+.chat ul li {
+  display: block;
+  list-style-type: none;
+  border-bottom: 2px solid #443c2d;
+  margin: 5px;
+  padding: 3px;
+}
+.chat ul li span {
+  font-family: 'Allan', cursive;
+}
+.chat input[type=text] {
+  border: none;
+  padding: 2px;
+  margin: 5px;
+  width: 230px;
+  border: 1px solid #c6bcaa;
+}

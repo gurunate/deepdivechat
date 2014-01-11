@@ -1,0 +1,37 @@
+// @import 'nib'
+
+@import url(http://fonts.googleapis.com/css?family=Allan);
+
+$color1 = #273F3F
+$color2 = #C4B087
+$color3 = #87775A
+$color4 = #993D31
+$color5 = #382C21
+
+.chat
+  border 1px solid $color3
+  border-radius 10px
+  width 300px
+  height 400px
+  padding 0
+  ul
+    margin 0
+    padding 0
+    height 360px
+    overflow auto
+    border-bottom 3px solid darken($color3, 75%)
+    li
+      display block
+      list-style-type none
+      border-bottom 2px solid darken($color3, 50%)
+      margin 5px
+      padding 3px
+      span
+        font-family 'Allan', cursive
+  input[type=text]
+    border none
+    padding 2px
+    margin 5px
+    width 230px
+    border 1px solid lighten($color3, 50%)
+
