@@ -41,7 +41,7 @@
 	 	socket.on('chat', function (data) {
 	 		$timeout(function() {
 		 		$scope.messages.push(data);
-	 		}, 10);
+	 		}, 100);
 	 	});
  	});
  });
