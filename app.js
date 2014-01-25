@@ -29,6 +29,13 @@ app.use(app.router);
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// CORS
+app.all('/*', function(req, res, next){
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Headers', 'X-Request-With,Content-Type');
+	res.header('Access-Control-Request-Method', 'GET,POST');
+});
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -45,5 +52,8 @@ io.set('heartbeat interval', 100);
 //io.set('log', 0);	// turn off debug message
 
 io.sockets.on('connection', socket);
+// TODO
+// add the following
+//io.sockets.on('disconnect', );
 
 // io.disable('heartbeats');
